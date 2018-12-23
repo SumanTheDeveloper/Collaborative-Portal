@@ -1,0 +1,10 @@
+package com.niit.Dao;
+
+import java.util.List;
+
+import com.niit.Model.Book;
+
+public interface BookDao 
+{
+	List<Book> getAllBooks();
+}

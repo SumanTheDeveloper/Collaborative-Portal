@@ -1,0 +1,5 @@
+package com.niit.Configuration;
+
+public class DBConfiguration {
+
+}

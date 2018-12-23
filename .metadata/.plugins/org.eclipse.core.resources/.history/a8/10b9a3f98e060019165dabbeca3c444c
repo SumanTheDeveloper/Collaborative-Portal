@@ -1,0 +1,18 @@
+package com.niit.Dao;
+
+import com.niit.Models.BlogPost;
+import com.niit.Models.BlogPostLikes;
+
+public class BlogPostLikesDaoImpl implements BlogPostLikesDao {
+
+	public BlogPostLikes hasUserLikedBlogPost(int blogPostId, String email) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public BlogPost updateLikes(int blogPostId, String email) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,30 @@
+
+Nov 26, 2018 13:52:16.13 NEW SESSION
+Nov 26, 2018 13:52:16.13 [14236:15964:1126/135216.130:ERROR:connection_factory_impl.cc(400)] Failed to connect to MCS endpoint with error -106
+Nov 26, 2018 13:52:42.87 [14236:15964:1126/135242.876:ERROR:connection_factory_impl.cc(400)] Failed to connect to MCS endpoint with error -106
+Nov 26, 2018 13:52:50.96 [14236:9744:1126/135250.959:ERROR:account_tracker.cc(242)] AccessTokenFetched error: Connection failed (-106).
+Nov 26, 2018 13:52:51.61 [14236:9744:1126/135251.618:ERROR:account_tracker.cc(242)] AccessTokenFetched error: Connection failed (-106).
+Nov 26, 2018 13:53:29.46 [14236:15964:1126/135329.465:ERROR:connection_factory_impl.cc(400)] Failed to connect to MCS endpoint with error -106
+Nov 26, 2018 13:54:59.54 [14236:15964:1126/135459.539:ERROR:connection_factory_impl.cc(400)] Failed to connect to MCS endpoint with error -106
+Nov 26, 2018 13:57:20.53 [14236:15964:1126/135720.530:ERROR:connection_factory_impl.cc(400)] Failed to connect to MCS endpoint with error -106
+Nov 26, 2018 14:02:49.94 [14236:15964:1126/140249.945:ERROR:connection_factory_impl.cc(400)] Failed to connect to MCS endpoint with error -106
+Nov 26, 2018 14:05:38.01 [14236:9744:1126/140538.015:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+Nov 26, 2018 14:06:07.72 [14236:9744:1126/140607.720:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+Nov 26, 2018 14:06:55.20 [14236:9744:1126/140655.199:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+Nov 26, 2018 14:08:19.72 [14236:9744:1126/140819.722:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+Nov 26, 2018 14:11:31.47 [14236:9744:1126/141131.475:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+Nov 26, 2018 14:12:49.95 [14236:15964:1126/141249.949:ERROR:connection_factory_impl.cc(400)] Failed to connect to MCS endpoint with error -106
+Nov 26, 2018 14:18:32.79 [14236:9744:1126/141832.793:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+Nov 26, 2018 14:22:49.95 [14236:15964:1126/142249.951:ERROR:connection_factory_impl.cc(400)] Failed to connect to MCS endpoint with error -106
+Nov 26, 2018 14:28:32.79 [14236:9744:1126/142832.797:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+Nov 26, 2018 14:32:49.95 [14236:15964:1126/143249.955:ERROR:connection_factory_impl.cc(400)] Failed to connect to MCS endpoint with error -106
+Nov 26, 2018 14:38:32.80 [14236:9744:1126/143832.799:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+Nov 26, 2018 14:42:49.96 [14236:15964:1126/144249.958:ERROR:connection_factory_impl.cc(400)] Failed to connect to MCS endpoint with error -106
+Nov 26, 2018 14:48:32.80 [14236:9744:1126/144832.804:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+Nov 26, 2018 14:52:49.96 [14236:15964:1126/145249.962:ERROR:connection_factory_impl.cc(400)] Failed to connect to MCS endpoint with error -106
+Nov 26, 2018 14:58:32.81 [14236:9744:1126/145832.808:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+Nov 26, 2018 15:02:49.96 [14236:15964:1126/150249.965:ERROR:connection_factory_impl.cc(400)] Failed to connect to MCS endpoint with error -106
+Nov 26, 2018 15:08:32.81 [14236:9744:1126/150832.812:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+Nov 26, 2018 15:12:49.97 [14236:15964:1126/151249.969:ERROR:connection_factory_impl.cc(400)] Failed to connect to MCS endpoint with error -106
+Nov 26, 2018 15:18:32.81 [14236:9744:1126/151832.817:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+Nov 26, 2018 15:18:59.92 [14236:9744:1126/151859.927:ERROR:http_bridge.cc(126)] NOT IMPLEMENTED

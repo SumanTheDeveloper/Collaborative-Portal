@@ -1,0 +1,29 @@
+package com.niit.Controllers;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.niit.Dao.BookDao;
+import com.niit.Model.Book;
+
+@Controller
+public class BookController 
+{
+	@Autowired
+	private BookDao bookDao;
+		
+	public BookController()
+	{
+		System.out.println("BookController bean is created");
+	}
+	@RequestMapping(value="/getallbooks",method=RequestMethod.GET)
+	public @ResponseBody  List<Book> getAllBooks(){
+		List<Book> books=bookDao.getAllBooks();
+		return books;
+	}
+}

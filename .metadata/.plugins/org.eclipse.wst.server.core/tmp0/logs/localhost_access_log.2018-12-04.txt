@@ -1,0 +1,10 @@
+127.0.0.1 - - [04/Dec/2018:18:47:17 +0530] "GET / HTTP/1.1" 404 1074
+127.0.0.1 - - [04/Dec/2018:18:49:24 +0530] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [04/Dec/2018:19:03:31 +0530] "GET /Project2Middleware HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [04/Dec/2018:19:03:50 +0530] "GET /Project2Middleware/ HTTP/1.1" 200 52
+0:0:0:0:0:0:0:1 - - [04/Dec/2018:19:05:24 +0530] "POST /Project2Middleware/addUser HTTP/1.1" 500 232
+0:0:0:0:0:0:0:1 - - [04/Dec/2018:19:09:21 +0530] "POST /Project2Middleware/RegisterUser HTTP/1.1" 404 1047
+127.0.0.1 - - [04/Dec/2018:19:10:43 +0530] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [04/Dec/2018:19:11:07 +0530] "POST /Project2Middleware/RegisterUser HTTP/1.1" 404 1047
+0:0:0:0:0:0:0:1 - - [04/Dec/2018:19:11:11 +0530] "POST /Project2Middleware/RegisterUser HTTP/1.1" 404 1047
+0:0:0:0:0:0:0:1 - - [04/Dec/2018:19:11:35 +0530] "POST /Project2Middleware/registerUser HTTP/1.1" 500 232

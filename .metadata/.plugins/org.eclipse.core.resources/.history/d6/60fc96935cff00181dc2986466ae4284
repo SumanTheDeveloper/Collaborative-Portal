@@ -1,0 +1,15 @@
+{{jobs}}
+<div class="container">
+  <h2>Jobs</h2>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+    </div>
+    <div class="panel-body">
+    <ul>
+    <li ng-repeat="job in jobs">
+    <li>{{job.jobTitle}}</li>
+    </li>
+    </ul>
+    </div>
+  </div>
+</div>

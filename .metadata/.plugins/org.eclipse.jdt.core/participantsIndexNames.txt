@@ -1,0 +1,5 @@
+INDEX VERSION 1.131
+C:\Users\SUMAN\Project2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3922248534.index
+\middlewarecruddemo\src\main\java
+C:\Users\SUMAN\Project2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4119310086.index
+\Project2Middleware\src\main\java

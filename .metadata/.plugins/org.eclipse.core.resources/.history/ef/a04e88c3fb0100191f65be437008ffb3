@@ -1,0 +1,45 @@
+/**
+ * 
+ */
+app.controller('BlogInDetailCtrl',function($scope,BlogService,$routeParams,$location,$sce){
+	var blogId=$routeParams.blogId
+	if($routeParams.blogId!=undefined){
+		BlogService.getBlog(blogId).then(function(response){
+			//query? select * from blogpost where blogpostid=?
+			$scope.blogPost=response.data
+			$scope.content=$sce.trustAsHtml($scope.blogPost.blogContent)
+		},function(response){
+			if(response.status==401)
+				$location.path('/login')
+		})
+	}
+	
+	$scope.approveblogPost=function(blogPostId){
+		BlogService.approveBlog(blogPostId).then(function(response){
+			$location.path('/blogswaitingforapproval/0')
+		},function(resposne){
+			$scope.error=response.data 
+			if(response.status==401)
+				$location.path('/login')
+		})
+	}
+	
+	$scope.rejectblogPost=function(blogPostId){
+		BlogService.rejectBlog(blogPostId).then(function(response){
+			$location.path('/blogswaitingforapproval/0')
+		},function(resposne){
+			$scope.error=response.data 
+			if(response.status==401)
+				$location.path('/login')
+		})
+	}
+		
+	$scope.updateBlog=function(blogPost){
+		BlogService.addBlog(blog).then(function(response){
+			alert('blogpost is updated successfully and it is waiting for approval...')
+			$location.path('/blogswaitingforapproval/0')
+		},function(response){
+			
+		})
+	}
+})

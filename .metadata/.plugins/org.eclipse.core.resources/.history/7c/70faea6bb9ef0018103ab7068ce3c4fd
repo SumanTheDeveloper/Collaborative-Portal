@@ -1,0 +1,14 @@
+package com.niit.Dao;
+
+import java.util.List;
+
+import com.niit.Model.Book;
+
+public class BookDaoImpl implements BookDao {
+
+	public List<Book> getAllBooks() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
