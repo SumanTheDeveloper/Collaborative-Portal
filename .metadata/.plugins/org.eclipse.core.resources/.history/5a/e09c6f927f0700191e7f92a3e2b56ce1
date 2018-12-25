@@ -1,0 +1,7 @@
+<div class="container">
+
+Blog titled "{{notification.blogTitle}}" is <b>{{notification.status}}</b> 
+<div ng-show="notification.status=='Rejected'">for the reason <b>"{{notification.rejectionReason}}"</b></div>
+
+<a ng-click="deletenotification(notification)"><span class="glyphicon glyphicon-trash"></span></a>
+</div>

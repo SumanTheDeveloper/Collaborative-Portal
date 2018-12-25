@@ -30,5 +30,7 @@ app.controller('NotificationCtrl',function($scope,$rootScope,$location,Notificat
 				})
 	}
 	
+	
+	
 	getAllNotificationsNotViewed()
 })

@@ -41,5 +41,20 @@ app.factory('BlogService',function($http){
     	return $http.put(BASE_URL + "/updatelikes/"+blogPostId)
     }
     
+    blogService.addBlogComment=function(blogComment){
+    	return $http.post(BASE_URL + "/addblogcomment",blogComment)
+    }
+    
+    blogService.getBlogComments=function(blogPostId){
+    	return $http.get(BASE_URL + "/blogcomments/"+blogPostId)
+    }
+    
+    blogService.editBlogComment=function(blogComment){
+    	return $http.put(BASE_URL + "/editblogcomment",blogComment)
+    }
+    
+    blogService.deleteBlogComment=function(comment){
+    	return $http['delete'](BASE_URL + "/deleteblogcomment",comment)
+    }
 	return blogService
 })

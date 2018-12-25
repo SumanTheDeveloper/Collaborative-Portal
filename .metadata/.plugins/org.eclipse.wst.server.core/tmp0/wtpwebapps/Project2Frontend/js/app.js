@@ -8,6 +8,7 @@ app.config(function($routeProvider){
 	.when('/addjob',{controller:'JobCtrl',templateUrl:'views/jobform.html'})
 	.when('/alljobs',{controller:'JobCtrl',templateUrl:'views/jobslist.html'})
 	.when('/login',{controller:'UserCtrl',templateUrl:'views/login.html'})
+    .when('/home',{controller:'NotificationCtrl',templateUrl:'views/home.html'})
 	.when('/getuser',{controller:'UserCtrl',templateUrl:'views/updateform.html'})
 	.when('/addblog',{controller:'BlogCtrl',templateUrl:'views/blogform.html'})
 	.when('/blogswaitingforapproval/:value',{controller:'BlogCtrl',templateUrl:'views/blogswaitingforapproval.html'})
@@ -16,7 +17,6 @@ app.config(function($routeProvider){
 	.when('/updateApprovedBlog/:blogId',{controller:'BlogInDetailCtrl',templateUrl:'views/updateblogform.html'})
 	.when('/blogsapproved/:value',{controller:'BlogCtrl',templateUrl:'views/blogsapproved.html'})
 	.when('/getnotification/:notificationId',{controller:'NotificationCtrl',templateUrl:'views/notificationdetail.html'})
-	.when('/home',{controller:'NotificationCtrl',templateUtl:'views/home.html'})
 	.otherwise({controller:'UserCtrl',templateUrl:'views/home.html'})
 })
 

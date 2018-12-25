@@ -15,8 +15,9 @@ notificationService.getNotification=function(notificationId){
 }
 
 notificationService.updateNotification=function(notificationId){
-    return $http.put(BASE_URL + "/updatenotification" +notificationId)	
+    return $http.put(BASE_URL + "/updatenotification/" +notificationId)	
 }
+
 
 return notificationService;	
 })

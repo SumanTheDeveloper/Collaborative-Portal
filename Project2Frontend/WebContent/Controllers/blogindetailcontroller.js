@@ -4,6 +4,7 @@
 app.controller('BlogInDetailCtrl',function($scope,BlogService,$routeParams,$location,$sce){
 	var blogId=$routeParams.blogId
 	$scope.isRejected=false
+	$scope.isCommented=false
 	if($routeParams.blogId!=undefined){
 		BlogService.getBlog(blogId).then(function(response){
 			//query? select * from blogpost where blogpostid=?
@@ -52,7 +53,11 @@ app.controller('BlogInDetailCtrl',function($scope,BlogService,$routeParams,$loca
 	$scope.showTxtForRejectionReason=function(){
 		$scope.isRejected=!$scope.isRejected
 	}
-		
+	
+	$scope.showCommentBox=function(){
+	   $scope.isCommented=!$scope.isCommented	
+	}
+	
 	$scope.updateBlog=function(blogPost){
 		BlogService.updateBlog(blogPost).then(function(response){
 			alert('blogpost is updated successfully and it is waiting for approval...')
@@ -73,5 +78,39 @@ app.controller('BlogInDetailCtrl',function($scope,BlogService,$routeParams,$loca
 		    	if(response.status==401)
 					$location.path('/login')
 		   })
+	 }
+	 
+	 $scope.addBlogComment=function(commentTxt,blogPost){
+		   var blogComment={}
+		   blogComment.commentTxt=commentTxt
+		   blogComment.blogPost=blogPost
+		   console.log(blogComment)
+		   BlogService.addBlogComment(blogComment).then(function(response){
+			   $scope.blogComment=response.data
+			   $scope.commentTxt=""
+		   },function(response){
+			   if(response.status==401)
+					$location.path('/login')
+		   })
+	   }
+		
+	   $scope.getBlogComments=function(blogPostId){
+		   BlogService.getBlogComments(blogPostId).then(
+		   function(response){
+			   $scope.comments=response.data //it is List<BlogComment> 
+		   },function(response){
+			   if(response.status==401)
+					$location.path('/login')
+		   })
+	   }
+	   
+	 $scope.deleteBlogComment=function(comment){
+		 BlogService.deleteBlogComment(comment).then(function(response){
+			 alert('comment deleted')
+		 },function(response){
+			 $scope.error=response.data 
+				if(response.status==401)
+					$location.path('/login')
+		 })
 	 }
 })

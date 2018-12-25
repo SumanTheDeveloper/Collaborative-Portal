@@ -1,2 +1,0 @@
-{{jobs}}
-<a href="deletejob(job.id)"><span class="glyphicon glyphicon-trash"></span></a>

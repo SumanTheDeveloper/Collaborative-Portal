@@ -1,8 +1,0 @@
-<span style="color:red">{{error.message}}</span>
-<form>
-<pre>
-Enter Email:<input type="email" ng-model="user.email"><br>
-Enter Password : <input type="password" ng-model="user.password"><br>
-<button ng-click="login(user)">Sign In</button>
-</pre>
-</form>

@@ -9,12 +9,14 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.niit.Dao.NotificationDao;
 import com.niit.Models.ErrorClass;
 import com.niit.Models.Notification;
+import com.niit.Models.User;
 
 @Controller
 public class NotificationController 
@@ -52,5 +54,6 @@ public class NotificationController
 			notificationDao.updateNotificactionViewedStatus(notificationId);
 			return new ResponseEntity<Void>(HttpStatus.OK);
 	   }
+	   
 }
 
