@@ -58,8 +58,8 @@ public class BlogCommentController
 			return new ResponseEntity<List<BlogComment>>(blogComments,HttpStatus.OK);
 	   }
 	   
-	   @RequestMapping(value="/editblogcomment",method=RequestMethod.PUT)
-	   public ResponseEntity<?> editBlogComment(@RequestBody BlogComment blogComment,HttpSession session)
+	   @RequestMapping(value="/editblogcomment/{commentId}",method=RequestMethod.PUT)
+	   public ResponseEntity<?> editBlogComment(@PathVariable int commentId,@RequestBody String commentTxt,HttpSession session)
 	   {
 		   String email=(String)session.getAttribute("email");
 			if(email==null)
@@ -67,17 +67,20 @@ public class BlogCommentController
 				ErrorClass errorClazz=new ErrorClass(6,"Please login...");
 	    		return new ResponseEntity<ErrorClass>(errorClazz,HttpStatus.UNAUTHORIZED);//login.html
 			}
+			BlogComment blogComment=blogCommentDao.getBlogComment(commentId);
 			if(!(blogComment.getCommentedBy().getEmail().equals(email)))	
 		    {
 				ErrorClass errorClazz=new ErrorClass(9,"You are not authorized to Update this comment..");
 				return new ResponseEntity<ErrorClass>(errorClazz,HttpStatus.UNAUTHORIZED);
 			}
+			blogComment.setCommentedOn(new Date());
+			blogComment.setCommentTxt(commentTxt);
 			blogCommentDao.editBlogComment(blogComment);
 			return new ResponseEntity<BlogComment>(blogComment,HttpStatus.OK);
 	   }
 	   
-	   @RequestMapping(value="/deleteblogcomment",method=RequestMethod.DELETE)
-	   public ResponseEntity<?> deleteBlogComment(@RequestBody BlogComment blogComment,HttpSession session)
+	   @RequestMapping(value="/deleteblogcomment/{commentId}",method=RequestMethod.DELETE)
+	   public ResponseEntity<?> deleteBlogComment(@PathVariable int commentId,HttpSession session)
 	   {
 		   String email=(String)session.getAttribute("email");
 			if(email==null)
@@ -85,12 +88,13 @@ public class BlogCommentController
 				ErrorClass errorClazz=new ErrorClass(6,"Please login...");
 	    		return new ResponseEntity<ErrorClass>(errorClazz,HttpStatus.UNAUTHORIZED);//login.html
 			}
+			BlogComment blogComment=blogCommentDao.getBlogComment(commentId);
 			if(!(blogComment.getCommentedBy().getEmail().equals(email)))	
 		    {
 				ErrorClass errorClazz=new ErrorClass(9,"You are not authorized to Update this comment..");
 				return new ResponseEntity<ErrorClass>(errorClazz,HttpStatus.UNAUTHORIZED);
 			}
-			blogCommentDao.deleteBlogComment(blogComment);
+			blogCommentDao.deleteBlogComment(commentId);
 			return new ResponseEntity<Void>(HttpStatus.OK);
 	   }
 }

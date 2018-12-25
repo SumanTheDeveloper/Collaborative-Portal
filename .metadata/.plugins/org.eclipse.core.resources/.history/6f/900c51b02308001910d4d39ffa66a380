@@ -1,0 +1,37 @@
+<div class="panel panel-info">
+<div class="panel-heading">
+<b>Blog Title: </b>{{blogPost.blogTitle}}<br>
+<b>Posted On :  </b>{{blogPost.postedOn | date:'dd-MMMM-yyyy'}}<br>
+<b>Posted By : </b> {{blogPost.postedBy.firstname}} &nbsp; {{blogPost.postedBy.lastname}}<br>
+<b>Email     :   </b> {{blogPost.postedBy.email}}<br>
+</div>
+<div class="panel-body">
+
+<p ng-bind-html="content"></p>
+
+<div>
+<a href="#/updateApprovedBlog/{{blogPost.blogPostId}}" ng-show="blogPost.postedBy.email==user.email"><span class="glyphicon glyphicon-pencil"></span>EditBlog</a><br>
+<div>
+<a href="" ng-click="updateLikes(blogPost.blogPostId)"><span class="glyphicon glyphicon-thumbs-up" ng-class="isLiked?'liked':'default'"> </span> </a> {{blogPost.likes}} likes &nbsp; 
+</div>
+<a href="" ng-click="showCommentBox()" >Comment</a> &nbsp;
+<div ng-show="isCommented!=false">
+<textarea rows="5" cols="50" ng-model="commentTxt"></textarea><br>
+<button class="btn btn-info" ng-click="addBlogComment(commentTxt,blogPost)">POST</button>
+<br>
+</div>
+<div ng-show="blogComment!=undefined">
+{{blogComment.commentTxt}}<br>
+&nbsp;&nbsp;&nbsp;commentedBy :- {{blogComment.commentedBy.firstname}} &nbsp; {{blogComment.commentedBy.lastname}}<br>
+&nbsp;&nbsp;&nbsp;commentedOn :- {{blogComment.commentedOn | date:'dd-MMMM-yyyy:HH:mm:ss'}}<br>
+</div>
+</div>
+<a href="" ng-click="getBlogComments(blogPost.blogPostId)" >View comments</a>
+<ul ng-repeat="blogComment in comments | orderBy:'-commentedOn'" style="list-style:none;">
+<li><span style="color:blue">{{blogComment.commentTxt}}</span> &nbsp; &nbsp; commented By &nbsp;<b>{{blogComment.commentedBy.firstname}} &nbsp;{{blogComment.commentedBy.lastname}} </b> &nbsp; on &nbsp;<b>{{blogComment.commentedOn | date:'dd-MMMM-yyyy:HH:mm:ss'}}</b> </li>
+<li><a href="" ng-click="editBlogComment(blogComment.commentId,blogComment.commentTxt)" ><span class="glyphicon glyphicon-pencil"></span>Edit</a> &nbsp; <a href="" ng-click="deleteBlogComment(blogComment.commentId)" ><span class="glyphicon glyphicon-trash"></span>Delete</a></li>
+</ul>
+</div>
+
+
+</div>

@@ -49,12 +49,12 @@ app.factory('BlogService',function($http){
     	return $http.get(BASE_URL + "/blogcomments/"+blogPostId)
     }
     
-    blogService.editBlogComment=function(blogComment){
-    	return $http.put(BASE_URL + "/editblogcomment",blogComment)
+    blogService.editBlogComment=function(commentId,commentTxt){
+    	return $http.put(BASE_URL + "/editblogcomment/"+commentId,commentTxt)
     }
     
-    blogService.deleteBlogComment=function(comment){
-    	return $http['delete'](BASE_URL + "/deleteblogcomment",comment)
+    blogService.deleteBlogComment=function(commentId){
+    	return $http['delete'](BASE_URL + "/deleteblogcomment/"+commentId)
     }
 	return blogService
 })
