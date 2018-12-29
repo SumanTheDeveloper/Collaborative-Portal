@@ -52,6 +52,9 @@
    </span>
    </ul>
 </li>
+<li><a href="#/uploadprofilepic" ng-show="user.email!=undefined" >
+<img src="http://localhost:8081/Project2Middleware/getimage?email={{user.email}}" alt="Upload image" height="40px" width="35px">
+</a></li>
 <li><a href="#/registerUser" ng-show="user==undefined">Sign Up</a></li>
 <li><a href="#/login"  ng-show="user==undefined"><span class="glyphicon glyphicon-log-in"></span>Sign In</a></li>
 <li><a href="#/getuser"  ng-show="user!=undefined">Edit User Profile</a></li>

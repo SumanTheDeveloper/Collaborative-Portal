@@ -17,6 +17,7 @@ app.config(function($routeProvider){
 	.when('/updateApprovedBlog/:blogId',{controller:'BlogInDetailCtrl',templateUrl:'views/updateblogform.html'})
 	.when('/blogsapproved/:value',{controller:'BlogCtrl',templateUrl:'views/blogsapproved.html'})
 	.when('/getnotification/:notificationId',{controller:'NotificationCtrl',templateUrl:'views/notificationdetail.html'})
+	.when('/uploadprofilepic',{templateUrl:'views/profilepicture.html'})
 	.otherwise({controller:'UserCtrl',templateUrl:'views/home.html'})
 })
 

@@ -11,6 +11,7 @@
 			<b>Posted On :  </b>{{blog.postedOn | date:'dd-MMMM-yyyy'}}
 			<b>Posted By : </b> {{blog.postedBy.firstname}}&nbsp;{{blog.postedBy.lastname}}
 			<b>Email     : </b> {{blog.postedBy.email}}
+			<img src="http://localhost:8081/Project2Middleware/getimage?email={{blog.postedBy.email}}" alt="No image" height="40px" width="35px">
 			</pre>
 			<hr>
 			</li>
