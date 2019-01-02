@@ -1,0 +1,56 @@
+package com.niit.Dao;
+
+import java.util.List;
+
+import org.hibernate.Query;
+import org.hibernate.SQLQuery;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.niit.Models.Friend;
+import com.niit.Models.User;
+
+@Repository
+@Transactional
+public class FriendDaoImpl implements FriendDao
+{
+	@Autowired
+	private SessionFactory sessionFactory;
+	public List<User> getAllSuggestedUsers(String email)
+	{
+		Session session=sessionFactory.getCurrentSession();
+		String queryString="select * from User_info where email " 
+				+ "in "
+				+ "(select email from User_info where email!=:e3 "
+				+ "minus "
+				+ "(select fromid_email from friend where toid_email=:e1 "
+				+ "union "
+				+ "select toid_email from friend where fromid_email=:e2))";
+		SQLQuery query=session.createSQLQuery(queryString);
+		query.setString("e1", email);
+		query.setString("e2", email);
+		query.setString("e3", email);
+		query.addEntity(User.class);
+		return query.list();
+	}
+
+	public void friendRequest(Friend friend) 
+	{
+		Session session=sessionFactory.getCurrentSession();
+		session.save(friend);
+	}
+
+	public List<Friend> pendingRequests(String email)
+	{
+		Session session=sessionFactory.getCurrentSession();
+		Query query=session.createQuery("from Friend where toId.email=:email and status=:status ");
+		query.setString("email", email);
+		query.setCharacter("status", 'P');
+		List<Friend> pendingRequests=query.list();
+		return pendingRequests;	
+	}
+
+}

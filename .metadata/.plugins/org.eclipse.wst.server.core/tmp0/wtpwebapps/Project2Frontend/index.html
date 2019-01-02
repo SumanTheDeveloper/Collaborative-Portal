@@ -37,6 +37,15 @@
           <li><a href="#/blogswaitingforapproval/0" ng-show="user.role=='ADMIN'">View all Not-Approved Blogs</a></li>
         </ul>
       </li>
+<li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" ng-show="user!=undefined">Friends
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#/suggestedusers" ng-show="user!=undefined">Suggested users</a></li>
+            <li > <a href="#/pendingrequests">Pending Requests</a> </li>
+                <li > <a href="#/listoffriends">Friends</a> </li>
+        </ul>
+      </li>
 </ul>
 <ul class="nav navbar-nav navbar-right">
 <li class="dropdown" >
@@ -89,4 +98,6 @@
 	<script type="text/javascript" src="Controllers/blogindetailcontroller.js"></script>
 	<script type="text/javascript" src="Services/notificationservice.js"></script>
 	<script type="text/javascript" src="Controllers/notificationcontroller.js"></script>
+	<script type="text/javascript" src="Services/friendservice.js"></script>
+	<script type="text/javascript" src="Controllers/friendcontroller.js"></script>
 </html>

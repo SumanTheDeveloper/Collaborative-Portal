@@ -18,6 +18,9 @@ app.config(function($routeProvider){
 	.when('/blogsapproved/:value',{controller:'BlogCtrl',templateUrl:'views/blogsapproved.html'})
 	.when('/getnotification/:notificationId',{controller:'NotificationCtrl',templateUrl:'views/notificationdetail.html'})
 	.when('/uploadprofilepic',{templateUrl:'views/profilepicture.html'})
+	.when('/suggestedusers',{controller:'FriendCtrl',templateUrl:'views/suggesteduserslist.html'})
+	.when('/pendingrequests',{controller:'FriendCtrl',templateUrl:'views/pendingrequests.html'})
+	.when('/listoffriends',{controller:'FriendCtrl',templateUrl:'views/friendslist.html'})
 	.otherwise({controller:'UserCtrl',templateUrl:'views/home.html'})
 })
 
