@@ -1,0 +1,30 @@
+package com.niit.Configurations;
+
+import org.springframework.messaging.simp.config.ChannelRegistration;
+import org.springframework.messaging.simp.config.MessageBrokerRegistry;
+import org.springframework.web.socket.config.annotation.StompEndpointRegistry;
+import org.springframework.web.socket.config.annotation.WebSocketMessageBrokerConfigurer;
+
+public class WebSocketConfiguration implements WebSocketMessageBrokerConfigurer {
+
+	public void registerStompEndpoints(StompEndpointRegistry registry) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void configureClientInboundChannel(ChannelRegistration registration) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void configureClientOutboundChannel(ChannelRegistration registration) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void configureMessageBroker(MessageBrokerRegistry registry) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -46,6 +46,7 @@
                 <li > <a href="#/listoffriends">Friends</a> </li>
         </ul>
       </li>
+<li><a href="#/chat" ng-show="user.email!=undefined">Chat</a></li>
 </ul>
 <ul class="nav navbar-nav navbar-right">
 <li class="dropdown" >
@@ -100,4 +101,8 @@
 	<script type="text/javascript" src="Controllers/notificationcontroller.js"></script>
 	<script type="text/javascript" src="Services/friendservice.js"></script>
 	<script type="text/javascript" src="Controllers/friendcontroller.js"></script>
+	<script type="text/javascript" src="Controllers/chatcontroller.js"></script>
+	<script type="text/javascript" src="Services/chatservice.js"></script>
+	<script type="text/javascript" src="js/sockjs/sockjs.min.js"></script>
+	<script type="text/javascript" src="js/stomp/dist/stomp.min.js"></script>
 </html>

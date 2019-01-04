@@ -9,7 +9,6 @@
 <fullyQualifiedTypeName name="com.niit.Dao.JobDao"/>
 <fullyQualifiedTypeName name="com.niit.Models.Job"/>
 <fullyQualifiedTypeName name="javax.persistence.SequenceGenerator"/>
-<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
 <fullyQualifiedTypeName name="javax.persistence.Lob"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
 <fullyQualifiedTypeName name="com.niit.Dao.BlogPostDao"/>
@@ -29,8 +28,6 @@
 <fullyQualifiedTypeName name="org.hibernate.Session"/>
 <fullyQualifiedTypeName name="org.hibernate.SQLQuery"/>
 <fullyQualifiedTypeName name="org.hibernate.Query"/>
-<fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
-<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
 <fullyQualifiedTypeName name="com.niit.Dao.FriendDao"/>
 <fullyQualifiedTypeName name="com.niit.Dao.UserDao"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
@@ -39,8 +36,19 @@
 <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
 <fullyQualifiedTypeName name="com.niit.Models.ErrorClass"/>
 <fullyQualifiedTypeName name="org.springframework.http.HttpStatus"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="com.niit.Models.User"/>
 <fullyQualifiedTypeName name="com.niit.Models.Friend"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
+<fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
+<fullyQualifiedTypeName name="org.springframework.web.socket.config.annotation.EnableWebSocketMessageBroker"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="org.springframework.messaging.simp.SimpMessagingTemplate"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+<fullyQualifiedTypeName name="org.springframework.messaging.simp.annotation.SubscribeMapping"/>
+<fullyQualifiedTypeName name="org.springframework.messaging.handler.annotation.DestinationVariable"/>
+<fullyQualifiedTypeName name="org.springframework.messaging.handler.annotation.MessageMapping"/>
+<fullyQualifiedTypeName name="com.niit.Models.Chat"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
 </qualifiedTypeNameHistroy>

@@ -67,4 +67,14 @@ app.controller('FriendCtrl',function($scope,$location,FriendService){
 			if(response.status==401)
 				$location.path('/login')
 		})
+		
+		 $scope.getMutualFriends=function(useremail){
+	    	FriendService.getMutualFriends(useremail).then(function(response){
+	    		$scope.mutualfriends=response.data
+	    		$scope.forUser=useremail
+	    	},function(response){
+	    		if(response.status==401)
+					$location.path('/login')
+	    	})
+	    }
 })

@@ -11,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.niit.Dao.FriendDao;
 import com.niit.Dao.UserDao;
@@ -99,5 +100,18 @@ public class FriendController
 			}
 			List<User> friends=friendDao.listOfFriends(email);
 			return new ResponseEntity<List<User>>(friends,HttpStatus.OK);
+		}
+		
+		@RequestMapping(value="/mutualfriends",method=RequestMethod.GET)
+		public ResponseEntity<?> getMutualFriends(@RequestParam String useremail,HttpSession session){
+			String email=(String)session.getAttribute("email");
+			System.out.println("requestparam is " + useremail );
+			 List<User> userList1=friendDao.listOfFriends(email);
+			 List<User> userList2=friendDao.listOfFriends(useremail);
+			 System.out.println(userList1);
+			 System.out.println(userList2);
+			 userList1.retainAll(userList2);
+			 System.out.println(userList1);
+			 return new ResponseEntity<List<User>>(userList1,HttpStatus.OK);
 		}
 }

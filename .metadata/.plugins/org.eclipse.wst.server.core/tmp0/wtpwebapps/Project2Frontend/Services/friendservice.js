@@ -27,5 +27,9 @@ app.factory('FriendService',function($http){
 		return $http.get(BASE_URL + "/friends")
 	}
 	
+	friendService.getMutualFriends=function(useremail){
+    	return $http.get(BASE_URL + "/mutualfriends?useremail="+useremail)
+    }
+	
 	return friendService;
 })

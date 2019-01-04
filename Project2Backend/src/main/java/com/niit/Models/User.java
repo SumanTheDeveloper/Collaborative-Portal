@@ -63,5 +63,17 @@ public boolean isOnline() {
 public void setOnline(boolean online) {
 	this.online = online;
 }
- 
+@Override
+public String toString() {
+	return this.email;
+}
+@Override
+public boolean equals(Object obj) {
+	User user=(User)obj;
+	return this.email.equals(user.getEmail());			
+}
+@Override
+public int hashCode() {
+	return this.email.hashCode();
+} 
 }
